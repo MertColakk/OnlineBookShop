@@ -1,6 +1,6 @@
-package com.bookshop.BookShopping.webApi;
+package com.bookshop.BookShopping.controllers;
 
-import com.bookshop.BookShopping.business.concretes.BookServiceImp;
+import com.bookshop.BookShopping.services.concretes.BookServiceImp;
 import com.bookshop.BookShopping.entities.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

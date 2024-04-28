@@ -5,28 +5,24 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Entity
+@Component
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
 public class Cart {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @OneToMany(cascade = CascadeType.ALL)
     private List<Book> myBooks = new ArrayList<>();
 
     private double totalCost = 0;
 
-    public boolean addToCart(Book book){
+    public void addToCart(Book book){
         this.myBooks.add(book);
         totalCost += book.getPrice();
-
-        return true;
     }
 }

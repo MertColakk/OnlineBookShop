@@ -24,4 +24,16 @@ public class Book {
     private int pageCount;
     private String author,publisher;
     private double price;
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pageCount=" + pageCount +
+                ", author='" + author + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

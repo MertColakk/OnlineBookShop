@@ -1,6 +1,6 @@
-package com.bookshop.BookShopping.business.concretes;
+package com.bookshop.BookShopping.services.concretes;
 
-import com.bookshop.BookShopping.business.abstracts.BookService;
+import com.bookshop.BookShopping.services.abstracts.BookService;
 import com.bookshop.BookShopping.entities.Book;
 import com.bookshop.BookShopping.repository.abstracts.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;

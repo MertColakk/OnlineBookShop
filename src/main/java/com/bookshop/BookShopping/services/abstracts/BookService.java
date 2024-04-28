@@ -1,4 +1,4 @@
-package com.bookshop.BookShopping.business.abstracts;
+package com.bookshop.BookShopping.services.abstracts;
 
 import com.bookshop.BookShopping.entities.Book;
 
