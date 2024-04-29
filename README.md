@@ -25,43 +25,43 @@ The Book Shopping Application provides endpoints for managing books and a shoppi
 
 ### Books
 #### Add Book
-URL: /api/books/add
-Method: POST
-Request Body: JSON representation of the book
-Response: Returns the added book with HTTP status OK
+  - URL: /api/books/add
+  - Method: POST
+  - Request Body: JSON representation of the book
+  - Response: Returns the added book with HTTP status OK
 
 #### Get All Books
-URL: /api/books/all
-Method: GET
-Response: Returns a list of all books with HTTP status OK
+  - URL: /api/books/all
+  - Method: GET
+  - Response: Returns a list of all books with HTTP status OK
 
 #### Get Book by ID
-URL: /api/books/{id}
-Method: GET
-Response: Returns the book with the specified ID with HTTP status OK
+  - URL: /api/books/{id}
+  - Method: GET
+  - Response: Returns the book with the specified ID with HTTP status OK
 
 #### Delete Book
-URL: /api/books/deleteBook
-Method: DELETE
-Request Parameter: bookName
-Response: Returns a success message if the book is deleted, or an error message with HTTP status METHOD_NOT_ALLOWED
+  - URL: /api/books/deleteBook
+  - Method: DELETE
+  - Request Parameter: bookName
+  - Response: Returns a success message if the book is deleted, or an error message with HTTP status METHOD_NOT_ALLOWED
 
 ### Cart
 #### Add to Cart
-URL: /cart/add/{id}
-Method: POST
-Path Variable: id (Book ID)
-Response: Returns a success message with HTTP status OK
+  - URL: /cart/add/{id}
+  - Method: POST
+  - Path Variable: id (Book ID)
+  - Response: Returns a success message with HTTP status OK
 
 #### Show Cart
-URL: /cart/show
-Method: GET
-Response: Returns a list of books in the cart with HTTP status OK
+  - URL: /cart/show
+  - Method: GET
+  - Response: Returns a list of books in the cart with HTTP status OK
 
 #### Show Total Cost
-URL: /cart/totalCost
-Method: GET
-Response: Returns the total cost of items in the cart with HTTP status OK
+  - URL: /cart/totalCost
+  - Method: GET
+  - Response: Returns the total cost of items in the cart with HTTP status OK
 
 ## Database
 This application uses "PostgreSQL" for data storage. Make sure to configure the database connection in application.properties.
