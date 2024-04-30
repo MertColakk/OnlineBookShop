@@ -21,10 +21,9 @@ public class UserController {
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
-    @GetMapping("/user/{id}")
-    ResponseEntity<Boolean> getID(@PathVariable("id")long id,@RequestParam String passw){
-        boolean ok = userServiceImp.getID(id,passw);
+    @PostMapping("/login")
+    ResponseEntity<Boolean> login(@RequestParam String email,@RequestParam String password){
 
-        return new ResponseEntity<>(ok, HttpStatus.OK);
+        return new ResponseEntity<>(userServiceImp.login(email, password), HttpStatus.OK);
     }
 }

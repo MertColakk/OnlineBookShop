@@ -22,4 +22,15 @@ public class UserServiceImp implements UserService {
 
         return user;
     }
+
+    @Override
+    public Boolean login(String email, String password) {
+        for(User user: userRepository.findAll()){
+            if(user.getEmail().equals(email) && bCryptPasswordEncoder.matches(password, user.getPassword())){
+                user.setLogined(true);
+                return true;
+            }
+        }
+        return  false;
+    }
 }

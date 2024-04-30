@@ -4,4 +4,5 @@ import com.bookshop.BookShopping.entities.User;
 
 public interface UserService {
     User register(User user);
+    Boolean login(String email,String password);
 }
