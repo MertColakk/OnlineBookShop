@@ -1,13 +1,11 @@
-package com.bookshop.BookShopping.services.concretes;
+package com.bookshop.app.services.concretes;
 
-import com.bookshop.BookShopping.entities.User;
-import com.bookshop.BookShopping.repository.abstracts.UserRepository;
-import com.bookshop.BookShopping.services.abstracts.UserService;
+import com.bookshop.app.models.User;
+import com.bookshop.app.repositories.UserRepository;
+import com.bookshop.app.services.abstracts.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserServiceImp implements UserService {
@@ -18,19 +16,26 @@ public class UserServiceImp implements UserService {
     @Override
     public User register(User user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+
         userRepository.save(user);
 
         return user;
     }
 
     @Override
-    public Boolean login(String email, String password) {
-        for(User user: userRepository.findAll()){
-            if(user.getEmail().equals(email) && bCryptPasswordEncoder.matches(password, user.getPassword())){
-                user.setLogined(true);
-                return true;
+    public Boolean login(String email,String password){
+        User user = userRepository.findByEmail(email);
+
+        return bCryptPasswordEncoder.matches(password, user.getPassword());
+    }
+
+    @Override
+    public User findUser(long id) {
+        for(User user:userRepository.findAll()){
+            if(user.getId()==id){
+                return user;
             }
         }
-        return  false;
+        return null;
     }
 }
