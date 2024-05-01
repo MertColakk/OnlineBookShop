@@ -20,7 +20,6 @@ public class User {
 
     private String firstName, lastName, email, password;
     private int age;
-    private double totalAmount = 0.0;
     private boolean isAdmin = false;
 
     @Override

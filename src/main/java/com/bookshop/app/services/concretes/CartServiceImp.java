@@ -43,4 +43,10 @@ public class CartServiceImp implements CartService {
         Cart cart = userCarts.get(user);
         return cart != null ? cart.getBooks() : Collections.emptyList();
     }
+
+    @Override
+    public double getTotal(User user) {
+        Cart cart = userCarts.get(user);
+        return cart != null ? cart.getTotalCost() : 0;
+    }
 }

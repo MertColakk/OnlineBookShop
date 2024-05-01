@@ -9,4 +9,5 @@ public interface CartService {
     void addToCart(User user, Book book);
     void removeFromCart(User user, Book book);
     List<Book> getCartItems(User user);
+    double getTotal(User user);
 }

@@ -49,6 +49,12 @@ public class CartController {
         User user = userService.findUser(userID);
         List<Book> userBooks = cartService.getCartItems(user);
         return new ResponseEntity<>(userBooks, HttpStatus.OK);
+    }
 
+    @GetMapping("{userID}/total")
+    public ResponseEntity<Double> getTotal(@PathVariable("userID")long userID){
+        User user = userService.findUser(userID);
+
+        return new ResponseEntity<>(cartService.getTotal(user), HttpStatus.OK);
     }
 }
