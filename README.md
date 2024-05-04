@@ -3,9 +3,10 @@
 This is a simple book shopping application built with Java Spring Boot, featuring RESTful APIs for managing books and a shopping cart.
 
 ## Screenshots
-<img src="Images/LoginImage.png" width="400" height="400">
-<img src="Images/RegisterScreen.png" width="400" height="400">
-
+<div style="display:flex; justify-content: center;">
+    <img src="Images/LoginImage.png" width="400" height="400" style="margin-right: 20px;">
+    <img src="Images/RegisterScreen.png" width="400" height="400">
+</div>
 
 ## Table of Contents
 - [Introduction](#introduction)
