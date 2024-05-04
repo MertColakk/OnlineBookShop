@@ -3,8 +3,8 @@
 This is a simple book shopping application built with Java Spring Boot, featuring RESTful APIs for managing books and a shopping cart.
 
 ## Screenshots
-![Login](Images/LoginImage.png)
-![Register](Images/RegisterScreen.png)
+![Login](Images/LoginImage.png =200x200)
+![Register](Images/RegisterScreen.png =200x200)
 
 ## Table of Contents
 - [Introduction](#introduction)
