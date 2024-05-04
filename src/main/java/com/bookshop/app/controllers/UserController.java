@@ -16,16 +16,25 @@ public class UserController {
     private UserServiceImp userService;
 
     @PostMapping("/register")
-    public ResponseEntity<User> register(@RequestBody User user){
-        userService.register(user);
-        return new ResponseEntity<>(user, HttpStatus.OK);
+    public ResponseEntity<Boolean> register
+            (@RequestParam String firstName,
+             @RequestParam String lastName,
+             @RequestParam String email,
+             @RequestParam String password,
+             @RequestParam String confirmPassword,
+             @RequestParam int age){
+
+        boolean isRegistered = userService.register(firstName,lastName,email,password,confirmPassword,age);
+        return new ResponseEntity<>(isRegistered, HttpStatus.OK);
     }
 
     @PostMapping("/login")
     public ResponseEntity<Boolean> login(@RequestParam String email,@RequestParam String password){
         boolean isLogined = userService.login(email, password);
 
+
         return new ResponseEntity<>(isLogined, HttpStatus.OK);
+
     }
 
     @GetMapping("/{id}")

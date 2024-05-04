@@ -10,7 +10,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
 public class User {
@@ -21,6 +20,15 @@ public class User {
     private String firstName, lastName, email, password;
     private int age;
     private boolean isAdmin = false;
+
+    public User(String firstName, String lastName, String email, String password, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.age = age;
+        this.isAdmin =  false;
+    }
 
     @Override
     public boolean equals(Object o) {

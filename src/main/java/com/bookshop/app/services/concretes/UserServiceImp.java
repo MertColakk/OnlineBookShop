@@ -14,12 +14,15 @@ public class UserServiceImp implements UserService {
     BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 
     @Override
-    public User register(User user) {
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+    public Boolean register(String firstName,String lastName,String email,String password,String passwordAgain,int age) {
+        if(password.equals(passwordAgain) && checkEmail(email) && age >= 18){
+            User user = new User(firstName,lastName,email,password,age);
+            user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 
-        userRepository.save(user);
-
-        return user;
+            userRepository.save(user);
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -37,5 +40,14 @@ public class UserServiceImp implements UserService {
             }
         }
         return null;
+    }
+
+    public Boolean checkEmail(String email){
+        for(User user: userRepository.findAll()){
+            if(user.getEmail().equals(email)){
+                return false;
+            }
+        }
+        return true;
     }
 }

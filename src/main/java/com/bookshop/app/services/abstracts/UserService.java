@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 
 public interface UserService {
-    User register(User user);
+    Boolean register(String firstName,String lastName,String email,String password,String passwordAgain,int age);
     Boolean login(String email,String password);
     User findUser(long id);
 }
