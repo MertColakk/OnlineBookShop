@@ -74,9 +74,7 @@ This application uses "PostgreSQL" for data storage. Make sure to configure the 
 
 ## Features I Want to Add
   - UI
-  - User register and login sytem(include password hashing).
-  - User Access Level
-  - User system includes cart system and saving the cart in database.
+  - User system includes cart system and saving the cart in every session.
 
 ## Little Note
 This is my first backend project and I learned a lot while doing this project and I continue to learn!
