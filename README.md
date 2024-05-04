@@ -4,8 +4,8 @@ This is a simple book shopping application built with Java Spring Boot, featurin
 
 ## Screenshots
 <div style="display:flex; justify-content: center;">
-    <img src="Images/LoginImage.png" width="600" height="600" style="margin-right: 20px;">
-    <img src="Images/RegisterScreen.png" width="600" height="600">
+    <img src="Images/LoginImage.png" width="500" height="500" style="margin-right: 20px;">
+    <img src="Images/RegisterScreen.png" width="500" height="500">
 </div>
 
 ## Table of Contents
