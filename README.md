@@ -23,44 +23,54 @@ The Book Shopping Application provides endpoints for managing books and a shoppi
 
 ## Endpoints
 
+### Users
+#### Login
+  - URL: /user/login
+  - Method: POST
+  - Request Paramater: Needs email and password to be in string format
+  - Response: Returns the login statues(boolean)
+
+#### Register
+  - URL:/user/register
+  - Method: POST
+  - Request Body: JSON representation of the user
+  - Response: Returns the added book with HTTP status OK
+
+#### Get with ID
+  - URL: /user/{id}
+  - Method: GET
+  - Path Variables: User's id(id)
+  - Response: Returns user's informations with HTTP status OK
+    
 ### Books
 #### Add Book
-  - URL: /api/books/add
+  - URL: book/add
   - Method: POST
   - Request Body: JSON representation of the book
   - Response: Returns the added book with HTTP status OK
 
 #### Get All Books
-  - URL: /api/books/all
+  - URL: book/show
   - Method: GET
   - Response: Returns a list of all books with HTTP status OK
 
-#### Get Book by ID
-  - URL: /api/books/{id}
-  - Method: GET
-  - Response: Returns the book with the specified ID with HTTP status OK
-
-#### Delete Book
-  - URL: /api/books/deleteBook
-  - Method: DELETE
-  - Request Parameter: bookName
-  - Response: Returns a success message if the book is deleted, or an error message with HTTP status METHOD_NOT_ALLOWED
-
 ### Cart
 #### Add to Cart
-  - URL: /cart/add/{id}
+  - URL: /cart/{userID}/add/{bookID}
   - Method: POST
-  - Path Variable: id (Book ID)
-  - Response: Returns a success message with HTTP status OK
+  - Path Variables: bookID , userID
+  - Response: Returns user's cart with HTTP status OK
 
 #### Show Cart
-  - URL: /cart/show
+  - URL: /cart/{userID}/items
   - Method: GET
-  - Response: Returns a list of books in the cart with HTTP status OK
+  - Path Variables: userID
+  - Response: Returns user's cart with HTTP status OK
 
 #### Show Total Cost
-  - URL: /cart/totalCost
+  - URL: /cart/{userID}/total
   - Method: GET
+  - Path Variables:  userID
   - Response: Returns the total cost of items in the cart with HTTP status OK
 
 ## Database
@@ -68,7 +78,6 @@ This application uses "PostgreSQL" for data storage. Make sure to configure the 
 
 ## Features I Want to Add
   - UI
-  - User register and login sytem(include password hashing).
   - User Access Level
   - User system includes cart system and saving the cart in database.
 
