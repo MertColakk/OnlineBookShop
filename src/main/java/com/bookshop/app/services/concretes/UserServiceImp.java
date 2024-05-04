@@ -29,7 +29,7 @@ public class UserServiceImp implements UserService {
     public Boolean login(String email,String password){
         User user = userRepository.findByEmail(email);
 
-        return bCryptPasswordEncoder.matches(password, user.getPassword());
+        return user!=null && bCryptPasswordEncoder.matches(password, user.getPassword());
     }
 
     @Override
