@@ -20,6 +20,15 @@ public class Book {
 
     private String name;
 
+    public Book(String name, int pageCount, String author, String publisher, double price, String genre) {
+        this.name = name;
+        this.pageCount = pageCount;
+        this.author = author;
+        this.publisher = publisher;
+        this.price = price;
+        this.genre = genre;
+    }
+
     private int pageCount;
     private String author,publisher;
     private double price;

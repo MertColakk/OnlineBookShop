@@ -15,10 +15,12 @@ public class BookServiceImp implements BookService {
     private BookRepository bookRepository;
 
     @Override
-    public Book add(Book book) {
+    public Boolean add(String name, int pageCount, String author, String publisher, String genre, double price) {
+
+        Book book = new Book(name,pageCount,author,publisher,price,genre);
         bookRepository.save(book);
 
-        return book;
+        return true;
     }
     @Override
     public List<Book> show() {

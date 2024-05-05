@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.Date;
 
@@ -17,7 +18,7 @@ public class UserController {
     private UserServiceImp userService;
 
     @PostMapping("/register")
-    public ResponseEntity<Boolean> register
+    public RedirectView register
             (@RequestParam String firstName,
              @RequestParam String lastName,
              @RequestParam String email,
@@ -25,8 +26,8 @@ public class UserController {
              @RequestParam String confirmPassword,
              @RequestParam int age){
 
-        boolean isRegistered = userService.register(firstName,lastName,email,password,confirmPassword,age);
-        return new ResponseEntity<>(isRegistered, HttpStatus.OK);
+        userService.register(firstName,lastName,email,password,confirmPassword,age);
+        return new RedirectView("/user/login", true);
     }
 
     @PostMapping("/login")
