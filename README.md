@@ -5,6 +5,8 @@ This is a simple book shopping application built with Java Spring Boot, featurin
 ## Screenshots
 <img src="Images/LoginImage.png">
 <img src="Images/RegisterScreen.png">
+<img src="Images/HomePage.png">
+<img src="Images/AddBookScreen.png">
 
 ## Table of Contents
 - [Introduction](#introduction)
