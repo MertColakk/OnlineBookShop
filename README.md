@@ -31,23 +31,23 @@ The Book Shopping Application provides endpoints for managing books and a shoppi
 
 ### Books
 #### Add Book
-  - URL: /api/books/add
+  - URL: /book/add
   - Method: POST
-  - Request Body: JSON representation of the book
-  - Response: Returns the added book with HTTP status OK
+  - Request Params: attributes of the book
+  - Response: Returns the home page if adding succesfully
 
 #### Get All Books
-  - URL: /api/books/all
+  - URL: /book/all
   - Method: GET
   - Response: Returns a list of all books with HTTP status OK
 
 #### Get Book by ID
-  - URL: /api/books/{id}
+  - URL: /book/{id}
   - Method: GET
   - Response: Returns the book with the specified ID with HTTP status OK
 
 #### Delete Book
-  - URL: /api/books/deleteBook
+  - URL: /book/deleteBook
   - Method: DELETE
   - Request Parameter: bookName
   - Response: Returns a success message if the book is deleted, or an error message with HTTP status METHOD_NOT_ALLOWED
