@@ -73,8 +73,9 @@ The Book Shopping Application provides endpoints for managing books and a shoppi
 This application uses "PostgreSQL" for data storage. Make sure to configure the database connection in application.properties.
 
 ## Features I Want to Add
-  - UI
-  - User access level
+  - UI.
+  - User access level.
+  - Ability to navigate between books on demand.
   - User system includes cart system and saving the cart in every session.
 
 ## Little Note
