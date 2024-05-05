@@ -74,6 +74,7 @@ This application uses "PostgreSQL" for data storage. Make sure to configure the 
 
 ## Features I Want to Add
   - UI
+  - User access level
   - User system includes cart system and saving the cart in every session.
 
 ## Little Note
