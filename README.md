@@ -1,4 +1,4 @@
-# Book Shopping Application(Start date: 28 April 2024)
+# Book Shopping Application(Finished for now)
 
 This is a simple book shopping application built with Java Spring Boot, featuring RESTful APIs for managing books and a shopping cart.
 
